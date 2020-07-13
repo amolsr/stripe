@@ -12,9 +12,9 @@
 ### Steps to genereate the credentials
 
 1. Create the stripe account.
-2. Confirm the email address.
-3. Create a product.
-4. Create the plan for the product by using dashboard or by using.
+2. Confirm the email address. (Note the public and private key from developer's tab)
+3. Create a product. (https://dashboard.stripe.com/test/products)
+4. Create the plan/price for the product by using dashboard or by using.
 
 ```
 curl https://api.stripe.com/v1/plans \

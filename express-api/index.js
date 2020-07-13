@@ -55,3 +55,58 @@ app.post("/sub", async (req, res) => {
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+// const stripe = require("stripe")(process.env.STRIPE_PRIV_KEY);
+
+// const createProduct = async () => {
+//   const PRODUCT_NAME = "Monthly Subscription";
+//   const PRODUCT_TYPE = "service";
+
+//   const product = await stripe.products.create({
+//     name: PRODUCT_NAME,
+//     type: PRODUCT_TYPE,
+//   });
+
+//   console.log(product);
+//   return product.id;
+// };
+
+// const createPlan = async (productId) => {
+//   const PLAN_NICKNAME = "Monthly Subscription Plan";
+//   const PLAN_INTERVAL = "month";
+//   const CURRENCY = "usd";
+//   const PLAN_PRICE = 200;
+
+//   const plan = await stripe.plans.create({
+//     product: productId,
+//     nickname: PLAN_NICKNAME,
+//     currency: CURRENCY,
+//     interval: PLAN_INTERVAL,
+//     amount: PLAN_PRICE,
+//   });
+
+//   console.log(plan);
+//   return plan.id;
+// };
+
+// const createCustomer = async () => {
+//   const CUSTOMER_EMAIl = "testemail@example.com";
+//   const CUSTOMER_SOURCE = "tok_mastercard";
+
+//   const customer = await stripe.customers.create({
+//     email: CUSTOMER_EMAIl,
+//     source: CUSTOMER_SOURCE,
+//   });
+//   console.log(customer);
+//   return customer.id;
+// };
+
+// const subscribeCustomerToPlan = async (customerId, planId) => {
+//     const subscription = await stripe.subscriptions.create({
+//         customer: customerId,
+//         items: [{plan: planId}],
+//     });
+
+//     console.log(subscription);
+//     return subscription;
+// }
