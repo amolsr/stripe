@@ -2,12 +2,12 @@
 
 ##### For React App
 
-STRIPE_PUB_KEY
+- STRIPE_PUB_KEY
 
 ##### For Express App
 
-STRIPE_PRIV_KEY
-PLAN_ID
+- STRIPE_PRIV_KEY
+- PLAN_ID
 
 ### Steps to genereate the credentials
 
