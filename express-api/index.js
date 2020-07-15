@@ -47,6 +47,59 @@ app.post("/sub", async (req, res) => {
     expand: ["latest_invoice.payment_intent"],
   });
 
+  // const subscription = await stripe.subscriptions.create({
+  //   customer: 'cus_4fdAW5ftNQow1a',
+  //   items: [
+  //     {
+  //       price: 'price_CBXbz9i7AIOTzr',
+  //     },
+  //     {
+  //       price: 'price_IFuCu48Snc02bc',
+  //       quantity: 2,
+  //     },
+  //   ],
+  // });
+
+  // stripe.subscriptions.retrieve(
+  //   'sub_HdUQlI7gD86ww5',
+  //   function(err, subscription) {
+  //     // asynchronously called
+  //   }
+  // );
+
+  // stripe.subscriptions.update(
+  //   'sub_HdUQlI7gD86ww5',
+  //   {metadata: {order_id: '6735'}},
+  //   function(err, subscription) {
+  //     // asynchronously called
+  //   }
+  // );
+
+  // stripe.subscriptions.del(
+  //   'sub_HdUQlI7gD86ww5',
+  //   function(err, confirmation) {
+  //     // asynchronously called
+  //   }
+  // );
+
+  // stripe.subscriptions.list(
+  //   {limit: 3},
+  //   function(err, subscriptions) {
+  //     // asynchronously called
+  //   }
+  // );
+
+  // stripe.subscriptionItems.create(
+  //   {
+  //     subscription: 'sub_HdUQlI7gD86ww5',
+  //     price: 'price_1H4TOuHy5646zRKyb0zmPj5N',
+  //     quantity: 2,
+  //   },
+  //   function(err, subscriptionItem) {
+  //     // asynchronously called
+  //   }
+  // );
+
   const status = subscription["latest_invoice"]["payment_intent"]["status"];
   const client_secret =
     subscription["latest_invoice"]["payment_intent"]["client_secret"];
